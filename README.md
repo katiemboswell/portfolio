@@ -1,14 +1,14 @@
-# Applied Data Science Graduate Student
+# Applied Data Science Portfolio
 
-### Education
-MS, Applied Data Science, In Progress
+## Education
+MS, Applied Data Science | In Progress
 
-MA, English Literature, Central Washington University
+MA, English Literature | Central Washington University
 
-BA, Linguistics, University of Washington
+BA, Linguistics | University of Washington
 
 
-### Work Experience
+## Work Experience
 Lead Business Systems Analyst, Grant County PUD, February 2023 - current
 
 Senior Training Coordinator, Grant County PUD, August 2020 - January 2023
@@ -20,4 +20,4 @@ Assistant Director, Learning Commons/Writing Center, Central Washington Universi
 Academic Counselor, Central Washington University, 2012-2014
 
 
-### Projects
+## Projects
