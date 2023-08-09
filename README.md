@@ -1,11 +1,12 @@
 # Applied Data Science Portfolio
 
 ## Education
-MS, Applied Data Science | In Progress
 
-MA, English Literature | Central Washington University
+MS, Applied Data Science, In Progress
 
-BA, Linguistics | University of Washington
+MA, English Literature, Central Washington University
+
+BA, Linguistics, University of Washington
 
 
 ## Work Experience
