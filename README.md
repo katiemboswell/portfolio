@@ -9,6 +9,12 @@ MA, English Literature, Central Washington University
 BA, Linguistics, University of Washington
 
 
+## School Projects
+[title](https://www.example.com)
+[title](https://www.example.com)
+[title](https://www.example.com)
+
+
 ## Work Experience
 Lead Business Systems Analyst, Grant County PUD, February 2023 - current
 
@@ -20,5 +26,3 @@ Assistant Director, Learning Commons/Writing Center, Central Washington Universi
 
 Academic Counselor, Central Washington University, 2012-2014
 
-
-## Projects
