@@ -10,8 +10,8 @@ BA, Linguistics, University of Washington
 
 
 ## School Projects
-[Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage]/projects
-/Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage.html
+[Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage](/projects
+/Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage.html)
 
 
 
