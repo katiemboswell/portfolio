@@ -6,14 +6,14 @@ After nearly two decades in higher education, I transitioned to industry and am 
 
 ## Education
 
-+ MS (Expected), Applied Data Science|*Bay Path University*
++ MS (In Progress), Applied Data Science|*Bay Path University*
 + MA, English Literature||*Central Washington University*
 + BA, Linguistics||*University of Washington*
 
 
 ## School Projects
-+ [Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage](projects/Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage.html)
-
-
-
++ [Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage Part 2](projects/Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage Part 2.html)
++ [Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage Part 1](projects/Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage Part 1.html)
++ [Multiple Linear Regression Modeling Estimation with Examples from Multiple Data Sets](projects/Multiple Linear Regression Modeling Estimation with Examples from Multiple Data Sets.html)
++ [Multiple Linear Regression Modeling Methods with Examples from Multiple Data Sets](projects/Multiple Linear Regression Modeling Methods with Examples from Multiple Data Sets.html)
 
