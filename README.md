@@ -14,6 +14,7 @@ After nearly two decades in higher education, I transitioned to industry and am 
 ## School Projects
 Projects are listed as most recent first.
 
++ [Logistic Regression Interaction Modeling Association of Sex Race Age and Chronic Renal Failure with Patient Death Rate](projects/Logistic Regression Interaction Modeling Association of Sex Race Age and Chronic Renal Failure with Patient Death Rate.html)
 + [Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage Part 2](projects/Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage Part 2.html)
 + [Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage Part 1](projects/Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage Part 1.html)
 + [Multiple Linear Regression Modeling Estimation with Examples from Multiple Data Sets](projects/Multiple Linear Regression Modeling Estimation with Examples from Multiple Data Sets.html)
