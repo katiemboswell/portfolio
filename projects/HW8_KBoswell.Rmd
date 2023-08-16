@@ -1,0 +1,108 @@
+---
+title: "Surival Analysis of Bladder Cancer Patients"
+author: "K Boswell"
+date: "2023-08-13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(survminer)
+library(haven)
+```
+
+Background: In a study of bladder cancer, tumors were removed from the bladders of 86 patients. Subsequently, the individuals were assigned to be treated either with the drug thiopeta or with a placebo. Time to the first recurrence of tumor in months is saved under the variable name time in the data set. Treatment status is saved under variable group; the value 0 represents placebo. Indicators of censoring status (where 1 designates that a tumor did recur and 0 that it did not and that the observation was censored) are saved under variable censor. The variable number is an indicator of the number of tumors initially removed from the bladder: 1 indicates that a patient had a single tumor, and 2 that the individual had two or more tumors.
+
+```{r}
+blca <- read_sas("bladder.sas7bdat")
+
+# Notes: We are evaluating time to recurrence of tumor.
+# Treatment 0 = Placebo
+# Treatment 1 = Thiopeta
+# Censor 1 = tumor recurred
+# Censor 0 = tumor did not recur or censored (non-event)
+# Number 1 = single tumor removed
+# Number 2 = two or more tumors removed
+
+# Check for data integrity:
+str(blca)
+
+col_has_missing <- colSums(is.na(blca)) > 0
+print(col_has_missing)
+
+# Check number of patients
+nrow(blca)
+
+# Check that group is loaded correctly since I only see zeroes right now
+group_sum <- sum(blca$group)
+print(group_sum)
+```
+*Question 1a) Estimate the survival function in each treatment group using the Kaplan-Meier estimator. Let S(t) = Pr(time > t) be the survival function of time, report Kaplan-Meier estimates of S(5), S(10) and S(25) for treatment group and placebo group, respectively. Given an explanation of Kaplan-Meier estimates of S(10) for treatment group and placebo group, respectively.*
+
+```{r}
+library(survival)
+km <-survfit(Surv(time, censor) ~ group, data = blca, type = "kaplan-meier")
+# Overview of KM results
+km
+# Summary of data model commented out after review
+# summary(km)
+```
+Answer:
+
+**Placebo Group (Group 0):**
+At month 5, 33 people were at risk of tumor recurrence. Two people had tumors recur. The hazard (the risk of tumor recurrence at 5 months given that you had no tumors just before the 5 month mark) is 2/33. The probability of having no tumors is 1-haz, or 31/33 (.0606). *The probability of having no tumors beyond 5 months = 31/33 x .739(the no tumor rate since the last event) = .695*. The standard error is .0681, and the 95% confidence interval is (0.573, 0.842).
+
+At month 10, 25 were at risk of tumor recurrence. One person had tumors recur. The hazard (the risk of tumor recurrence at 10 months given that you had no tumors just before the 10 month mark) is 1/25. The probability of having no tumors is 1-haz, or 24/25 = (.96). *The probability of having no tumors beyond 10 months = 24/25 x .581(the no tumor rate since the last event) =  .558*. The standard error is 0.0742, and the 95% confidence interval is (0.430, 0.724).
+
+At month 25, 15 people were at risk of tumor recurrence. 1 person had tumors recur. The hazard (the risk of tumor recurrence at 25 months given that you had no tumors just before the 25 month mark) is 1/15 (.067). The probability of having no tumors is 1-haz, or 14/15 = .933. *The probability of having no tumors beyond 25 months = 14/15 x .433 = .404*. The standard error is 0.0760, and the 95% confidence interval is (0.279, 0.584).
+
+**Treatment Group (Group 1):**
+At month 5, 27 people were at risk of tumor recurrence. 1 person had tumors recur. The hzard (the risk of tumor recurrence at 5 months given that you had no tumors just before the 5 month mark) is 1/27. The probability of having no tumors is 1-haz, or 26/27 (.963). *The probability of having no tumors beyond 5 months = (.963) x .752 = .724*. The standard error is .0743, and the 95% confidence interval is (0.593, 0.886).
+
+At month 10, We cannot infer the exact estimate for this time point because we have no event at month 10. We would have to use a parametric method to infer month 10, and the km-model is non-parametric. We must use the estimates from the previous event, which occurs at month 6. No other event occurs until month 17. Therefore, 26 people were at risk, and 2 people had tumors recur, so the hazard is 2/26. The probability of having no tumors is 1-haz, or 24/26 (.923). *The probability of having no tumors beyond 10 months = (.923) x .724 = .669*. The standard error is .0783, and the 95% confidence interval is (0.532, 0.841). 
+
+At month 25, We cannot infer the exact estimate for this time point because we have no event at month 25. We would have to use a parametric method to infer month 25, and the km-model is non-parametric. We must use the estimates from the previous event, which occurs at month 24. No other event occurs until month 26. Therefore, 16 people were at risk, and 1 person had tumors recur, so the hazard is 1/16. The probability of having no tumors is 1-haz, or 15/16 (0.938). *The probability of having no tumors beyond 25 months = (0.9375 x .571) = .536*. The standard error is .0867, and the 95% confidence interval is (0.390, 0.736).
+
+
+*Question 1b) Construct survival curves plot based on the Kaplan-Meier estimates. Does it appear that the individuals in one group have a longer time to first recurrence of tumor than those in the other group?*
+```{r}
+# View a plot for overview of data
+# ggsurvplot(km, data = blca, pval = TRUE, xlab = "Months")
+
+plot(km, conf.int=F, xlab = "Months", ylab = "Probability of No Tumor Recurrence S(t)", main = "Kaplan-Meier Model", col = c("lightblue", "salmon"),
+     las=1, lty = 1, lwd = 2, mark.time=TRUE)
+legend(25, 0.95, legend = c("Placebo", "Treatment"), lty=1, lwd = 2, col=c('lightblue', 'salmon'), bty = "", cex=.6)
+```
+Answer: 
+The plot suggests that the treatment group has a better probability of not having tumors recur than the placebo group at some points in time, but there is a lot of censoring, especially in the treatment group, so it would be unwise to rely on the plot alone.
+
+*Question 1c) Test the null hypothesis that the distributions of recurrence times are identical in the two treatment groups? Which test do you use? What do you conclude?*
+
+We use a nonparametric log-rank test. If the null hypothesis is true, the test statistic has approximate chi-square distribution with 1 degree of freedom.
+
+```{r}
+# log rank test to null hypothesis:
+fit.diff_blca<-survdiff(Surv(time, censor) ~ group, data=blca)
+fit.diff_blca
+
+```
+Answer: The log-rank test statistic takes the value of 1.5 with 1 degree of freedom. The chi-square critical value at .05 = 3.84 on one degree of freedom. 1.5 < 3.84, and the p-value is .2. Therefore, I fail to reject the null hypothesis.
+
+
+*Question 1d) Write down the expression for Cox proportional hazards model where group and number are explanatory variables. Remember to define the hazard functions in the model.*
+h(t) = h0(t) * exp(B1group + B2number)
+Where:
+h(t) is the hazard function at time t.
+h0(t) is the baseline hazard function at time t.
+
+
+*Question 1e) Fit the Cox proportional hazards model in part (d). Estimate the hazard ratio of treatment group versus placebo group, and get its 95% confidence interval. Interpret the results.*
+
+```{r}
+cox_model_blca <- coxph(Surv(time, censor) ~ group + number, data = blca)
+summary(cox_model_blca)
+```
+The hazard ratio of the treatment group is .6751 with a 95% confidence interval of (0.3727, 1.223). That means that the treatment group has a hazard rate about 32.49% lower than the placebo group. However, since the confidence interval includes 1, we cannot have confidence in the results. In addition because the p-values on all the tests are not significant at the .05 alpha level, it suggests that the model is not significantly better than the null model. Once again, I fail to reject the null hypothesis.
+
+
