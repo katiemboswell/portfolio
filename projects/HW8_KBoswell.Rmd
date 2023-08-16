@@ -55,16 +55,16 @@ Answer:
 
 *pr(T>10) [probability of having no tumors beyond 10 months] = [conditional probabilities of having no tumors beyond 10 months given no tumors beyond 9 months] x [probability of having no tumors right beyond 9 months] = (1 = hazard at 10 months) x Pr(T>10) or 24/25 = (.96). x .581 =  .558. The standard error is 0.0742, and the 95% confidence interval is (0.430, 0.724).*
 
-*pr(T>25) [probability of having no tumors beyond 25 months] = [conditional probabilities of having no tumors beyond 10 months given no tumors beyond 24 months] x [probability of having no tumors right beyond 24 months] = (1 = hazard at 25 months) x Pr(T>25) or 14/15 = .933. x .433 = .404. The standard error is 0.0760, and the 95% confidence interval is (0.279, 0.584).*
+*pr(T>25) [probability of having no tumors beyond 25 months] = [conditional probabilities of having no tumors beyond 25 months given no tumors beyond 24 months] x [probability of having no tumors right beyond 24 months] = (1 = hazard at 25 months) x Pr(T>25) or 14/15 = .933. x .433 = .404. The standard error is 0.0760, and the 95% confidence interval is (0.279, 0.584).*
 
 **Treatment Group (Group 1):**
 *pr(T>5) [probability of having no tumors beyond 5 months] = [conditional probabilities of having no tumors beyond 5 months given no tumors beyond 4 months] x [probability of having no tumors right beyond 4 months] = (1 = hazard at 5 months) x Pr(T>4) = 26/27 (.963). x .752 = .724. The standard error is .0743, and the 95% confidence interval is (0.593, 0.886).*
 
 At month 10, We cannot infer the exact estimate for this time point because we have no event at month 10. We would have to use a parametric method to infer month 10, and the km-model is non-parametric. We must use the estimates from the previous event, which occurs at month 6. No other event occurs until month 17.
-*pr(T>10) [probability of having no tumors beyond 6 months] = [conditional probabilities of having no tumors beyond 6 months given no tumors beyond 5 months] x [probability of having no tumors right beyond 5 months] = (1 = hazard at 6 months) x Pr(T>10) =  24/26 (.923). x .724 = .669. The standard error is .0783, and the 95% confidence interval is (0.532, 0.841).*
+*pr(T>10) [probability of having no tumors beyond 6 months] = [conditional probabilities of having no tumors beyond 10 months given no tumors beyond 5 months] x [probability of having no tumors right beyond 5 months] = (1 = hazard at 6 months) x Pr(T>10) =  24/26 (.923). x .724 = .669. The standard error is .0783, and the 95% confidence interval is (0.532, 0.841).*
 
 At month 25, We cannot infer the exact estimate for this time point because we have no event at month 25. We would have to use a parametric method to infer month 25, and the km-model is non-parametric. We must use the estimates from the previous event, which occurs at month 24. No other event occurs until month 26. 
-*pr(T>25) [probability of having no tumors beyond 25 months] = [conditional probabilities of having no tumors beyond 24 months given no tumors beyond 23 months] x [probability of having no tumors right beyond 24 months] = (1 = hazard at 24 months) x Pr(T>10) = 15/16 (0.938) x .571) = .536. The standard error is .0867, and the 95% confidence interval is (0.390, 0.736).*
+*pr(T>25) [probability of having no tumors beyond 25 months] = [conditional probabilities of having no tumors beyond 25 months given no tumors beyond 23 months] x [probability of having no tumors right beyond 24 months] = (1 = hazard at 24 months) x Pr(T>10) = 15/16 (0.938) x .571) = .536. The standard error is .0867, and the 95% confidence interval is (0.390, 0.736).*
 
 
 *Question 1b) Construct survival curves plot based on the Kaplan-Meier estimates. Does it appear that the individuals in one group have a longer time to first recurrence of tumor than those in the other group?*
