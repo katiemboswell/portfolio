@@ -6,7 +6,7 @@ After nearly two decades in higher education, I transitioned to industry and am 
 
 ## Education
 
-+ MS (In Progress), Applied Data Science|*Bay Path University*
++ MS (In Progress), Applied Data Science, Specialist Concentration |*Bay Path University*
 + MA, English Literature||*Central Washington University*
 + BA, Linguistics||*University of Washington*
 
