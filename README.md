@@ -14,6 +14,7 @@ After nearly two decades in higher education, I transitioned to industry and am 
 ## School Projects
 Projects are listed as most recent first.
 
++ [CHILD Bayesian Decision Network](projects/Child Bayesian Decision Network.html)
 + [Evaluating Recurrence of Tumor Using Survival Analysis](projects/Evaluating Recurrence of Tumor Using Survival Analysis.html)
 + [Logistic Regression with Interaction Variables](projects/Logistic Regression with Interaction Variables.html)
 + [Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage Part 2](projects/Logistic Regression Modeling Using APGAR Score and Toxemia as Predictors on Germinal Matrix Hemorrhage Part 2.html)
