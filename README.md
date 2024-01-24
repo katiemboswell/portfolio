@@ -11,7 +11,7 @@ After nearly two decades in higher education, I transitioned to industry and am 
 + BA, Linguistics||*University of Washington*
 
 
-## School Projects
+## Selected School Projects
 Projects are listed as most recent first.
 
 + [CHILD Bayesian Decision Network](projects/CHILD Bayesian Decision Network.html)
