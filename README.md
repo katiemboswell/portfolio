@@ -14,6 +14,7 @@ After nearly two decades in higher education, I transitioned to industry and am 
 ## Selected School Projects
 Projects are listed as most recent first.
 
++ [Salary Gender Pay Gap Analysis](projects/Salary Analysis.html)
 + [CHILD Bayesian Decision Network](projects/CHILD Bayesian Decision Network.html)
 + [Evaluating Recurrence of Tumor Using Survival Analysis](projects/Evaluating Recurrence of Tumor Using Survival Analysis.html)
 + [Logistic Regression with Interaction Variables](projects/Logistic Regression with Interaction Variables.html)
