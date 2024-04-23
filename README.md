@@ -2,7 +2,7 @@
 
 ## About Me
 
-After nearly two decades in higher education, I transitioned to industry and am currently a Lead Business Systems Analyst in Hydropower Asset Management. I am half-way through a second master's degree in Applied Data Science with a specialization in machine learning and hope to spend the next chapter in my career focused on advanced statistical modeling and data analysis. I expect to graduate in October 2024.
+After nearly two decades in higher education, I transitioned to industry and am currently a Lead Business Systems Analyst in Hydropower Asset Management. I am 80% through a second master's degree in Applied Data Science with a Specialist Concentration (calculus and linear algebra-based) and hope to spend the next chapter in my career focused on advanced statistical modeling and data analysis. I expect to graduate in October 2024.
 
 ## Education
 
